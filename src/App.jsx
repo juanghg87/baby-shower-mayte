@@ -19,7 +19,7 @@ function App() {
       {loading ? (
         <SplashScreen />
       ) : (
-        <section>
+        <section className="content">
           <Name />
         </section>
       )}

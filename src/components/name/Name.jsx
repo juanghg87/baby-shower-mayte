@@ -1,27 +1,49 @@
-import React from 'react';
+import { motion } from 'framer-motion';
 import "./name.scss";
 import Nube3 from "../../assets/nube3.png";
 import Osito2 from "../../assets/osito2.png";
 import Osito1 from "../../assets/osita1.png";
 import Nube2 from "../../assets/nube2.png";
 
-const name = () => {
+const Name = () => {
+  const nubeAnimation = {
+    animate: {
+      x: ["0%", "50%", "0%"],
+      scale: [1, 0.95, 1],
+    },
+    transition: {
+      duration: 30,
+      repeat: Infinity,
+      ease: "easeInOut"
+    }
+  };
+
   return (
     <div>
-      <img src={Nube3} alt="Nube decorativa" className="nube3" />
+      <motion.img
+        src={Nube3}
+        alt="Nube decorativa"
+        className="nube3"
+        {...nubeAnimation}
+      />
+      
       <img src={Osito2} alt="Osita decorativa" className="osito2" />
+      
       <div className="container">
-        <h2 className="message">
-          Bienvenidos al Baby Shower de
-        </h2>
-        <h1 className="name">
-          Mayté
-        </h1>
+        <h2 className="message">Bienvenidos al Baby Shower de</h2>
+        <h1 className="name">Mayté</h1>
       </div>
-      <img src={Nube2} alt="Osita decorativa" className="nube2" />
+      
+      <motion.img
+        src={Nube2}
+        alt="Nube decorativa"
+        className="nube2"
+        {...nubeAnimation}
+      />
+      
       <img src={Osito1} alt="Osita decorativa" className="osito1" />
     </div>
   )
 }
 
-export default name
+export default Name;

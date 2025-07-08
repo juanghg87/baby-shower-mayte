@@ -1,32 +1,29 @@
-html{
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-}
-
-section{
-    height: 100vh;
-    scroll-snap-align: center;
-}
-
-html, body {
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
-
-body::before {
-  content: "";
+body {
+  height: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  overflow-y: hidden;
   position: relative;
+}
+
+body::before {
+  content: "";
   position: fixed;
-  z-index: -1;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
+  z-index: -1;
+  
   background-color: hsla(49, 100%, 94%, 1);
   background-image:
     radial-gradient(circle at 88% 0%, rgba(245, 86, 126, 0.342) 0px, transparent 50%),
@@ -38,4 +35,9 @@ body::before {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: center;
 }

@@ -1,0 +1,37 @@
+.splash-screen {
+    position: fixed;
+    inset: 0;
+    background-color: #fff3f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    font-family: 'Dancing Script', cursive;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 80px;
+    animation: splashAnimation 3s ease forwards;
+}
+
+/* Animación suave de entrada y salida */
+@keyframes splashAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    70% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.9);
+        visibility: hidden;
+    }
+}

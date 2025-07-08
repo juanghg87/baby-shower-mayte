@@ -1,17 +1,30 @@
-import { useState } from 'react'
-import './App.scss'
-import Name from "./components/name/Name.jsx";
+import { useEffect, useState } from 'react';
+import './App.scss';
+import Name from './components/name/Name.jsx';
+import SplashScreen from './components/splashScreen/SplashScreen.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
-      <section id="Home">
-        <Name />
-      </section>
+      {loading ? (
+        <SplashScreen />
+      ) : (
+        <section>
+          <Name />
+        </section>
+      )}
     </>
-  )
+  );
 }
 
-export default App
+export default App;

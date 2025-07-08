@@ -18,7 +18,7 @@ const name = () => {
           Mayté
         </h1>
       </div>
-      <img src={Nube2} alt="Osita decorativa" className="nube2" />
+      {/* <img src={Nube2} alt="Osita decorativa" className="nube2" /> */}
       <img src={Osito1} alt="Osita decorativa" className="osito1" />
     </div>
   )

@@ -7,7 +7,9 @@ function App() {
 
   return (
     <>
-      <Name />
+      <section id="Home">
+        <Name />
+      </section>
     </>
   )
 }

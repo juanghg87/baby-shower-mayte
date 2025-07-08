@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 
 * {
@@ -81,4 +82,50 @@ body {
     width: 100vw;
     height: auto;
     z-index: 2;
+}
+
+button {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    z-index: 999;
+    font-size: 4vw;
+    bottom: 8vh;
+    border-radius: 50%;
+    border: none;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Dancing Script', cursive;
+
+    /* Efecto Liquid Glass */
+    background: radial-gradient(circle at 65% 35%,
+            rgba(255, 255, 255, 0.8) 0%,
+            rgba(255, 255, 255, 0.4) 20%,
+            rgba(255, 255, 255, 0.1) 60%,
+            transparent 80%);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    box-shadow:
+        0 8px 32px rgba(31, 38, 135, 0.2),
+        inset 0 4px 20px rgba(255, 255, 255, 0.5),
+        inset 0 -4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+/* Efectos de interacción */
+button:hover {
+    transform: translateX(-50%) scale(1.05);
+    box-shadow:
+        0 12px 40px rgba(31, 38, 135, 0.3),
+        inset 0 6px 25px rgba(255, 255, 255, 0.6),
+        inset 0 -6px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+    transform: translateX(-50%) scale(0.98);
+    filter: brightness(0.95);
 }

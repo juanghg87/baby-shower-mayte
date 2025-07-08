@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+.nube3 {
+    z-index: 1;
+    top: -320px;
+    left: -251px;
+    position: absolute;
+    width: 500px;
+    height: 750px;
+    opacity: 60%;
+}
+
+.osito2 {
+    z-index: 1;
+    top: 50px;
+    left: 0;
+    position: absolute;
+    width: 150px;
+    height: 225px;
+    opacity: 70%;
+    rotate: 10deg;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .message {
+        width: 60%;
+        margin: -30% 0 0 0;
+        font-size: 40px;
+        font-family: 'Dancing Script', regular;
+        color: rgba(0, 0, 0, 0.650);
+        text-align: center;
+    }
+
+    .name {
+        font-size: 100px;
+        font-family: 'Dancing Script', regular;
+        color: rgba(0, 0, 0, 0.650);
+    }
+}
+
+.osito1 {
+    z-index: 1;
+    bottom: 30px;
+    right: 15%;
+    position: absolute;
+    width: 250px;
+    height: 375px;
+    rotate: 8deg;
+}
+
+.nube2 {
+    z-index: 2;
+    bottom: -170px;
+    left: -51px;
+    position: absolute;
+    width: 400px;
+    height: 600px;
+}

@@ -28,6 +28,8 @@ const Invitacion = () => {
             <div className="container3">
 
             </div>
+
+            
         </motion.div>
     );
 };

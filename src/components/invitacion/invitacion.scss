@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+$scrollbar-width: 12px;
+$scrollbar-height: 12px;
+$scrollbar-track-color: rgba(0, 0, 0, 0.05);
+$scrollbar-track-border: 2px solid rgba(0, 0, 0, 0.1);
+$scrollbar-thumb-color: rgba(31, 38, 135, 0.4);
+$scrollbar-thumb-hover: rgba(31, 38, 135, 0.6);
+$scrollbar-thumb-border: 3px solid rgba(255, 255, 255, 0.5);
+$scrollbar-thumb-radius: 8px;
+
+
+::-webkit-scrollbar {
+    width: $scrollbar-width;
+    height: $scrollbar-height;
+}
+
+::-webkit-scrollbar-track {
+    background: $scrollbar-track-color;
+    border: $scrollbar-track-border;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $scrollbar-thumb-color;
+    border-radius: $scrollbar-thumb-radius;
+    border: $scrollbar-thumb-border;
+
+    &:hover {
+        background-color: $scrollbar-thumb-hover;
+    }
+}
+
+// Firefox
+* {
+    scrollbar-width: thin;
+    scrollbar-color: $scrollbar-thumb-color $scrollbar-track-color;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+}
+
+$bp-mobile-max: 767px;
+$bp-tablet: 768px;
+$bp-ipad: 1024px;
+$bp-desktop: 1200px;
+
+.container1,
+.container2,
+.container3{
+    width: 100vw;
+    height: 33vh;
+}
+
+.container1{
+    z-index: 1;
+}
+
+.container2{
+    
+}

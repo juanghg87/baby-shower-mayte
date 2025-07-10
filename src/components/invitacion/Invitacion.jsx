@@ -1,5 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import "./invitacion.scss"
 
 const Invitacion = () => {
     const ref = useRef(null);
@@ -18,7 +19,15 @@ const Invitacion = () => {
             }}
             transition={{ duration: 5 }}
         >
-            <h1>¡Bienvenidos al Baby Shower de Mayté!</h1>
+            <div className="container1">
+                
+            </div>
+            <div className="container2">
+                
+            </div>
+            <div className="container3">
+
+            </div>
         </motion.div>
     );
 };

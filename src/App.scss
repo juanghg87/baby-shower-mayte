@@ -1,20 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
   overflow-x: hidden;
-  overflow-y: hidden;
   position: relative;
 }
-
 
 body::before {
   content: "";
@@ -24,7 +22,6 @@ body::before {
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  
   background-color: hsla(49, 100%, 94%, 1);
   background-image:
     radial-gradient(circle at 88% 0%, rgba(245, 86, 126, 0.342) 0px, transparent 50%),
@@ -38,7 +35,28 @@ body::before {
   background-attachment: fixed;
 }
 
+#root {
+  position: relative;
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+
+main {
+  display: block;
+}
+
 section {
   height: 100vh;
-  scroll-snap-align: center;
+  scroll-snap-align: start;
+}
+
+.content,
+.invitacion {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

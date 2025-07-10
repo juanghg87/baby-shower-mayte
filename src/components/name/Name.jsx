@@ -33,36 +33,54 @@ const Name = () => {
     }
   }
 
+  const handleInvitacion = () => {
+    const section = document.getElementById('invitacion');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div>
-      <motion.img
-        src={Nube3}
-        alt="Nube decorativa"
-        className="nube3"
-        {...nubeAnimation}
-      />
 
-      <motion.img
-        src={Osito2}
-        alt="Osita decorativa"
-        className="osito2"
-        {...ositaAnimation}
-      />
+      <div className="parte1">
+        <motion.img
+          src={Nube3}
+          alt="Nube decorativa"
+          className="nube3"
+          {...nubeAnimation}
+        />
+        <motion.img
+          src={Osito2}
+          alt="Osita decorativa"
+          className="osito2"
+          {...ositaAnimation}
+        />
+      </div>
 
-      <div className="container">
+      <div className="parte2">
         <h2 className="message">Bienvenidos al Baby Shower de</h2>
         <h1 className="name">Mayté</h1>
       </div>
 
-      <motion.img
-        src={Nube2}
-        alt="Nube decorativa"
-        className="nube2"
-        {...nubeAnimation}
-      />
+      <div className="parte3">
+        <motion.img
+          src={Nube2}
+          alt="Nube decorativa"
+          className="nube2"
+          {...nubeAnimation}
+        />
 
-      <img src={Osito1} alt="Osita decorativa" className="osito1" />
-      <button id="btn" class="glass">Inivitación</button>
+        <img src={Osito1} alt="Osita decorativa" className="osito1" />
+        <button
+          id="btn"
+          className="glass"
+          onClick={handleInvitacion}
+        >
+          Invitación
+        </button>
+      </div>
+
     </div>
   )
 }

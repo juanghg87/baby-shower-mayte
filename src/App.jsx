@@ -19,10 +19,17 @@ function App() {
       {loading ? (
         <SplashScreen />
       ) : (
-        <section className="content">
-          <Name />
-        </section>
+        <main>
+          <section className="content" id="home">
+            <Name />
+          </section>
+
+          <section className="invitacion" id="invitacion">
+            <h1>Hola</h1>
+          </section>
+        </main>
       )}
+
     </>
   );
 }

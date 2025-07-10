@@ -18,7 +18,7 @@ const Invitacion = () => {
             }}
             transition={{ duration: 5 }}
         >
-            <h1>¡Bienvenidos al Baby Shower!</h1>
+            <h1>¡Bienvenidos al Baby Shower de Mayté!</h1>
         </motion.div>
     );
 };

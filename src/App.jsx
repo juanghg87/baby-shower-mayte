@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.scss';
 import Name from './components/name/Name.jsx';
 import SplashScreen from './components/splashScreen/SplashScreen.jsx';
+import Invitacion from './components/invitacion/Invitacion.jsx';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -25,7 +26,7 @@ function App() {
           </section>
 
           <section className="invitacion" id="invitacion">
-            <h1>Hola</h1>
+            <Invitacion />
           </section>
         </main>
       )}

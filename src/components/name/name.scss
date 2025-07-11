@@ -119,19 +119,20 @@ $bp-desktop: 1200px;
 .parte3 {
     .nube2 {
         position: absolute;
-        bottom: -35vh;
+        bottom: -18vh;
         left: -20vw;
-        width: 120vw;
+        width: 90vw;
         max-width: 500px;
         z-index: 1;
+        filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.23));
     }
 
     .osito1 {
         position: absolute;
         bottom: 2vh;
         right: 5vw;
-        width: 45vw;
-        max-width: 200px;
+        width: 60vw;
+        max-width: 300px;
         transform: rotate(8deg);
     }
 

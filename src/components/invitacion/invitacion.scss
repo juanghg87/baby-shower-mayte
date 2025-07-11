@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+// Importación única de fuentes
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-
+// Scroll personalizado
 $scrollbar-width: 12px;
 $scrollbar-height: 12px;
 $scrollbar-track-color: rgba(0, 0, 0, 0.05);
@@ -10,7 +10,6 @@ $scrollbar-thumb-color: rgba(31, 38, 135, 0.4);
 $scrollbar-thumb-hover: rgba(31, 38, 135, 0.6);
 $scrollbar-thumb-border: 3px solid rgba(255, 255, 255, 0.5);
 $scrollbar-thumb-radius: 8px;
-
 
 ::-webkit-scrollbar {
     width: $scrollbar-width;
@@ -32,17 +31,13 @@ $scrollbar-thumb-radius: 8px;
     }
 }
 
-// Firefox
-* {
-    scrollbar-width: thin;
-    scrollbar-color: $scrollbar-thumb-color $scrollbar-track-color;
-}
-
-
+// Firefox scroll
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scrollbar-width: thin;
+    scrollbar-color: $scrollbar-thumb-color $scrollbar-track-color;
 }
 
 body {
@@ -51,27 +46,277 @@ body {
     position: relative;
 }
 
+// Breakpoints
 $bp-mobile-max: 767px;
 $bp-tablet: 768px;
 $bp-ipad: 1024px;
 $bp-desktop: 1200px;
 
+// Layout general
 .container1,
 .container2,
-.container3{
+.container3 {
     width: 100vw;
     height: 33vh;
 }
 
-.container1{
+// =========================
+// Mobile styles
+// =========================
+
+.container1 {
+    position: relative;
     z-index: 1;
-    background-color: aqua;
+
+    .nube3 {
+        position: absolute;
+        top: -20vh;
+        right: -100px;
+        width: 100vw;
+        max-width: 400px;
+        opacity: 0.7;
+        z-index: 2;
+    }
+
+    .perrita1 {
+        position: absolute;
+        top: -1vh;
+        left: 20vw;
+        width: 100vw;
+        max-width: 150px;
+        height: 225px;
+        filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.23));
+    }
 }
 
-.container2{
-    background-color: black;
+.container2 {
+    position: relative;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .textoContenido {
+        position: absolute;
+        top: -10vh;
+        width: 80vw;
+        max-width: 440px;
+        height: 35vh;
+        max-height: 500px;
+        padding: 5vw;
+        text-align: center;
+        font-family: "Dancing Script";
+        font-size: 10vw;
+        color: hsla(0, 0%, 99%, 0.6);
+        background-color: hsla(346, 91%, 65%, 0.7);
+        border-radius: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .contenedorBotones {
+        position: absolute;
+        bottom: -15vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .boton1,
+        .boton2 {
+            width: 350px;
+            height: 51px;
+            font-family: 'Gentium Plus', serif;
+            font-style: italic;
+            font-size: 6vw;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 20px 0;
+            box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.6);
+        }
+
+        .boton1 {
+            background-color: #f7567c;
+            color: #fcfcfc;
+        }
+
+        .boton2 {
+            background-color: #FFFAE3;
+            color: #F784A0;
+        }
+    }
 }
 
-.container3{
-    background-color: blue;
+.container3 {
+    position: relative;
+
+    .nube2 {
+        position: absolute;
+        bottom: -30vh;
+        left: -10vw;
+        width: 100vw;
+        max-width: 500px;
+        opacity: 0.7;
+        z-index: 2;
+    }
+
+    .ositaGlobitos {
+        position: absolute;
+        bottom: -10vh;
+        right: -10vw;
+        width: 100vw;
+        max-width: 350px;
+        z-index: 2;
+        filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.53));
+    }
+}
+
+// =========================
+// Tablet styles
+// =========================
+
+@media (min-width: $bp-tablet) {
+    .container1 {
+        .nube3 {
+            top: -25vh;
+            max-width: 500px;
+        }
+
+        .perrita1 {
+            max-width: 200px;
+            height: auto;
+        }
+    }
+
+    .container2 {
+        .textoContenido {
+            width: 100vw;
+            max-width: 640px;
+            font-size: 8vw;
+            border-radius: 20px;
+        }
+
+        .contenedorBotones {
+
+            .boton1,
+            .boton2 {
+                font-size: 4vw;
+            }
+        }
+    }
+
+    .container3 {
+        .nube2 {
+            max-width: 600px;
+            z-index: 3;
+        }
+
+        .ositaGlobitos {
+            max-width: 450px;
+            opacity: 0.8;
+        }
+    }
+}
+
+//TABLET IPAD PRO
+@media (min-width: $bp-ipad) and (max-width: ($bp-desktop - 1)) {
+
+    .container1 {
+        .nube3 {
+            top: -20vh;
+            max-width: 600px;
+        }
+
+        .perrita1 {
+            max-width: 300px;
+            height: auto;
+        }
+    }
+
+    .container2 {
+        .textoContenido {
+            width: 100vw;
+            max-width: 640px;
+            font-size: 7.5vw;
+            border-radius: 20px;
+        }
+
+        .contenedorBotones {
+
+            .boton1,
+            .boton2 {
+                font-size: 3.5vw;
+                width: 50vw;
+            }
+        }
+    }
+
+    .container3 {
+        .nube2 {
+            max-width: 700px;
+            z-index: 3;
+            bottom: -25vh;
+        }
+
+        .ositaGlobitos {
+            max-width: 500px;
+            opacity: 0.8;
+        }
+    }
+}
+
+// === DESKTOP (≥1200px) ===
+@media (min-width: $bp-desktop) {
+    .container1 {
+        .nube3 {
+            top: -20vh;
+            max-width: 300px;
+        }
+
+        .perrita1 {
+            max-width: 200px;
+            height: auto;
+        }
+    }
+
+    .container2 {
+        .textoContenido {
+            width: 100vw;
+            max-width: 440px;
+            font-size: 2.5vw;
+            border-radius: 20px;
+        }
+
+        .contenedorBotones {
+
+            .boton1,
+            .boton2 {
+                font-size: 1.5vw;
+                width: 20vw;
+                height: 31px;
+                margin: 10px 0;
+            }
+        }
+    }
+
+    .container3 {
+        .nube2 {
+            max-width: 500px;
+            z-index: 3;
+            bottom: -40vh;
+            left: 1vw;
+        }
+
+        .ositaGlobitos {
+            max-width: 400px;
+            opacity: 0.8;
+            right: -1vw;
+            bottom: -15vh;
+        }
+    }
+
 }

@@ -1,5 +1,7 @@
+// Invitacion.jsx
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import "./invitacion.scss";
 import Perrita1 from "../../assets/perrita1.png";
 import Nube2 from "../../assets/nube2.png";
@@ -16,6 +18,10 @@ const Invitacion = () => {
     });
 
     const [mostrarConfirmacion, setMostrarConfirmacion] = useState(false);
+
+    const handleCerrarConfirmacion = () => {
+        setMostrarConfirmacion(false);
+    };
 
     return (
         <motion.div
@@ -88,8 +94,9 @@ const Invitacion = () => {
 
             <WpButton />
 
-            {/* Mostrar confirmación si es verdadero */}
-            {mostrarConfirmacion && <Confirmacion />}
+            {mostrarConfirmacion && (
+                <Confirmacion onClose={handleCerrarConfirmacion} />
+            )}
         </motion.div>
     );
 };

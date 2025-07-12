@@ -81,6 +81,22 @@ $bp-desktop: 1200px;
     font-family: 'Dancing Script', cursive;
     color: rgba(0, 0, 0, 0.65);
 
+    .close{
+        // position: absolute;
+        // bottom: 1vh;
+        // right: 1vw;
+        // max-width: 100px;
+        width: 20%;
+    }
+
+    .closeBtn{
+        position: absolute;
+        background-color: transparent;
+        bottom: 1vh;
+        border: none;
+        width: 100px;
+    }
+
     .ositaSonriendo {
         position: absolute;
         top: -5vh;

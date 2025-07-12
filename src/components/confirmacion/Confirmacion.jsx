@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import './confirmacion.scss';
 import OsitaSonriendo from '../../assets/ositaSonriendo.png';
-import axios from 'axios'; // axios instalado
+import axios from 'axios';
+import Close from '../../assets/close.png';
 
-const Confirmacion = () => {
+const Confirmacion = ({ onClose }) => {
     const [nombre, setNombre] = useState('');
     const [mensaje, setMensaje] = useState('');
 
@@ -25,6 +27,9 @@ const Confirmacion = () => {
 
     return (
         <div className='confirmacion'>
+            <button className='closeBtn' onClick={onClose}>
+                <img src={Close} alt="cerrar" className='close' />
+            </button>
             <img src={OsitaSonriendo} alt="Osita decoración" className='ositaSonriendo' />
             <h2 className='titulo'>Mayté</h2>
 

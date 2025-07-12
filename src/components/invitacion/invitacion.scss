@@ -47,6 +47,7 @@ body {
 }
 
 // Breakpoints
+$bp-mobile-small: 480px;
 $bp-mobile-max: 767px;
 $bp-tablet: 768px;
 $bp-ipad: 1024px;
@@ -63,6 +64,7 @@ $bp-desktop: 1200px;
 // =========================
 // Mobile styles
 // =========================
+
 
 .container1 {
     position: relative;
@@ -172,6 +174,74 @@ $bp-desktop: 1200px;
         max-width: 350px;
         z-index: 2;
         filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.53));
+    }
+}
+
+@media (max-width: $bp-mobile-small) {
+    .container1 {
+        .nube3 {
+            top: -20vh;
+            right: -10vw;
+            width: 100vw;
+            max-width: 300px;
+            z-index: -1;
+        }
+
+        .perrita1 {
+            top: -1vh;
+            left: 15vw;
+            width: 100vw;
+            max-width: 120px;
+            height: auto;
+        }
+    }
+
+    .container2 {
+
+        .textoContenido {
+            color: hsla(0, 0%, 99%, 0.8);
+        }
+
+        .contenedorBotones {
+            bottom: -18vh;
+
+            .boton1,
+            .boton2 {
+                width: 250px;
+                height: 41px;
+                font-size: 5vw;
+                margin: 10px 0;
+            }
+
+            .boton1 {
+                background-color: #f7567c;
+                color: #fcfcfc;
+            }
+
+            .boton2 {
+                background-color: #FFFAE3;
+                color: #F784A0;
+            }
+        }
+    }
+
+    .container3 {
+
+        .nube2 {
+            bottom: -30vh;
+            left: -10vw;
+            width: 100vw;
+            max-width: 500px;
+            opacity: 0.7;
+            z-index: 2;
+        }
+
+        .ositaGlobitos {
+            bottom: -10vh;
+            right: -10vw;
+            width: 100vw;
+            max-width: 250px;
+        }
     }
 }
 

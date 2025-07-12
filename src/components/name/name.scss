@@ -51,6 +51,8 @@ body {
     position: relative;
 }
 
+
+$bp-mobile-small: 480px;
 $bp-mobile-max: 767px;
 $bp-tablet: 768px;
 $bp-ipad: 1024px;
@@ -173,6 +175,21 @@ $bp-desktop: 1200px;
     button:active {
         transform: translateX(-50%) scale(0.98);
         filter: brightness(0.95);
+    }
+}
+
+//MOBIEL
+
+@media (max-width: $bp-mobile-small) {
+    .parte3 {
+        .osito1 {
+            position: absolute;
+            bottom: 10vh;
+            right: 5vw;
+            width: 60vw;
+            max-width: 150px;
+            transform: rotate(8deg);
+        }
     }
 }
 

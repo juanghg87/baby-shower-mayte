@@ -343,8 +343,8 @@ $bp-desktop: 1200px;
 @media (min-width: $bp-desktop) {
     .container1 {
         .nube3 {
-            top: -20vh;
-            max-width: 300px;
+            top: -40vh;
+            max-width: 400px;
         }
 
         .perrita1 {
@@ -382,9 +382,9 @@ $bp-desktop: 1200px;
         }
 
         .ositaGlobitos {
-            max-width: 400px;
+            max-width: 300px;
             opacity: 0.8;
-            right: -1vw;
+            right: 5vw;
             bottom: -15vh;
         }
     }

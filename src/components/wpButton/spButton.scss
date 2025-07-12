@@ -1,0 +1,81 @@
+$bp-tablet: 768px;
+$bp-ipad: 1024px;
+$bp-desktop: 1200px;
+
+.wpButton {
+    position: absolute;
+    bottom: 2vh;
+    left: 10%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 4;
+
+    background: radial-gradient(circle at 65% 35%,
+            rgba(255, 255, 255, 0.8) 0%,
+            rgba(255, 255, 255, 0.4) 20%,
+            rgba(255, 255, 255, 0.1) 60%,
+            transparent 80%);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    box-shadow:
+        0 8px 32px rgba(31, 38, 135, 0.2),
+        inset 0 4px 20px rgba(255, 255, 255, 0.5),
+        inset 0 -4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.wpButton:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+.wpButton:active {
+    transform: translateX(-50%) scale(0.98);
+    filter: brightness(0.95);
+}
+
+.whatsAppBtn {
+    width: 10vw;
+}
+
+@media (min-width: $bp-tablet) {
+    .wpButton {
+        bottom: 4vh;
+        left: 10%;
+        width: 60px;
+        height: 60px;
+    }
+
+
+    .whatsAppBtn {
+        width: 5vw;
+    }
+}
+
+@media (min-width: $bp-ipad) and (max-width: ($bp-desktop - 1)) {
+    .wpButton {
+        bottom: 4vh;
+        left: 10%;
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (min-width: $bp-desktop) {
+    .wpButton {
+        bottom: 4vh;
+        left: 10%;
+        width: 80px;
+        height: 80px;
+    }
+    .whatsAppBtn {
+        width: 4vw;
+    }
+}

@@ -138,7 +138,7 @@ $bp-desktop: 1200px;
         transform: rotate(8deg);
     }
 
-    button {
+    .glass {
         position: absolute;
         bottom: 8vh;
         left: 50%;
@@ -168,11 +168,11 @@ $bp-desktop: 1200px;
         transition: all 0.4s ease;
     }
 
-    button:hover {
+    .glass:hover {
         transform: translateX(-50%) scale(1.05);
     }
 
-    button:active {
+    .glass:active {
         transform: translateX(-50%) scale(0.98);
         filter: brightness(0.95);
     }
@@ -351,10 +351,10 @@ $bp-desktop: 1200px;
             max-width: 200px;
         }
 
-        button {
-            width: 120px;
-            height: 120px;
-            font-size: 2vw;
+        .glass {
+            width: 7vw;
+            height: 7vw;
+            font-size: 1.5vw;
         }
     }
 }

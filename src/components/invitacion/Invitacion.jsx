@@ -5,6 +5,7 @@ import Perrita1 from "../../assets/perrita1.png";
 import Nube2 from "../../assets/nube2.png";
 import Nube3 from "../../assets/nube3.png";
 import OsitaGlobitos from "../../assets/ositaGlobitos.png";
+import WpButton from "../wpButton/WpButton"
 
 const Invitacion = () => {
     const ref = useRef(null);
@@ -80,6 +81,8 @@ const Invitacion = () => {
                 />
                 <img src={OsitaGlobitos} alt="Osita con globitos" className="ositaGlobitos" />
             </div>
+
+            <WpButton />
         </motion.div>
     );
 };

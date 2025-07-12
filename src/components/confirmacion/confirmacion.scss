@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+$scrollbar-width: 12px;
+$scrollbar-height: 12px;
+$scrollbar-track-color: rgba(0, 0, 0, 0.05);
+$scrollbar-track-border: 2px solid rgba(0, 0, 0, 0.1);
+$scrollbar-thumb-color: rgba(31, 38, 135, 0.4);
+$scrollbar-thumb-hover: rgba(31, 38, 135, 0.6);
+$scrollbar-thumb-border: 3px solid rgba(255, 255, 255, 0.5);
+$scrollbar-thumb-radius: 8px;
+
+
+::-webkit-scrollbar {
+    width: $scrollbar-width;
+    height: $scrollbar-height;
+}
+
+::-webkit-scrollbar-track {
+    background: $scrollbar-track-color;
+    border: $scrollbar-track-border;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $scrollbar-thumb-color;
+    border-radius: $scrollbar-thumb-radius;
+    border: $scrollbar-thumb-border;
+
+    &:hover {
+        background-color: $scrollbar-thumb-hover;
+    }
+}
+
+// Firefox
+* {
+    scrollbar-width: thin;
+    scrollbar-color: $scrollbar-thumb-color $scrollbar-track-color;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+}
+
+
+$bp-mobile-small: 480px;
+$bp-mobile-max: 767px;
+$bp-tablet: 768px;
+$bp-ipad: 1024px;
+$bp-desktop: 1200px;
+
+.confirmacion {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 80vw;
+    height: 80vh;
+
+    font-size: 5rem;
+    text-align: center;
+
+    background-color: #FFFAE3;
+    border-radius: 20px;
+    font-family: 'Dancing Script', cursive;
+    color: rgba(0, 0, 0, 0.65);
+
+    .ositaSonriendo {
+        position: absolute;
+        top: -5vh;
+        width: 50vw;
+        max-width: 500px;
+        filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.23));
+    }
+
+    .formulario {
+        position: absolute;
+        bottom: 10vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        input {
+            width: 300px;
+            height: 45px;
+            border-radius: 10px;
+            border: 1px solid #f8d6dd;
+            background-color: #fff;
+            font-family: 'Gentium Plus', serif;
+            font-style: italic;
+            color: #F8AEBE;
+            text-align: center;
+            font-size: 1.2rem;
+
+            &::placeholder {
+                color: #F8AEBE;
+            }
+        }
+
+        button {
+            margin-top: 10px;
+            width: 150px;
+            height: 40px;
+            background-color: #F784A0;
+            color: #fff;
+            font-family: 'Gentium Plus', serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.3);
+        }
+    }
+}

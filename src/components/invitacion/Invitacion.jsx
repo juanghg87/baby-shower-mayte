@@ -1,11 +1,12 @@
 import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import "./invitacion.scss";
 import Perrita1 from "../../assets/perrita1.png";
 import Nube2 from "../../assets/nube2.png";
 import Nube3 from "../../assets/nube3.png";
 import OsitaGlobitos from "../../assets/ositaGlobitos.png";
 import WpButton from "../wpButton/WpButton"
+import Confirmacion from '../confirmacion/Confirmacion';
 
 const Invitacion = () => {
     const ref = useRef(null);
@@ -13,6 +14,8 @@ const Invitacion = () => {
         margin: "-50%",
         once: false
     });
+
+    const [mostrarConfirmacion, setMostrarConfirmacion] = useState(false);
 
     return (
         <motion.div
@@ -37,7 +40,6 @@ const Invitacion = () => {
                         ease: "easeInOut"
                     }}
                 />
-
                 <motion.img
                     src={Perrita1}
                     alt="Perrita"
@@ -56,10 +58,12 @@ const Invitacion = () => {
 
             <div className="container2">
                 <div className="textoContenido">
-                    ¡ A mis papis y a mi nos gustaría que nos acompañaras en esta fecha especial !
+                    ¡ A mis papis y a mí nos gustaría que nos acompañaras en esta fecha especial !
                 </div>
                 <div className="contenedorBotones">
-                    <button className="boton1">Confirmar asistencia</button>
+                    <button className="boton1" onClick={() => setMostrarConfirmacion(true)}>
+                        Confirmar asistencia
+                    </button>
                     <button className="boton2">Más adelante</button>
                 </div>
             </div>
@@ -83,6 +87,9 @@ const Invitacion = () => {
             </div>
 
             <WpButton />
+
+            {/* Mostrar confirmación si es verdadero */}
+            {mostrarConfirmacion && <Confirmacion />}
         </motion.div>
     );
 };

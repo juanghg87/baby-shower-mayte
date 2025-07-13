@@ -81,7 +81,11 @@ $bp-desktop: 1200px;
     font-family: 'Dancing Script', cursive;
     color: rgba(0, 0, 0, 0.65);
 
-    .close{
+    box-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.48);
+    -webkit-box-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.48);
+    -moz-box-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.48);
+
+    .close {
         // position: absolute;
         // bottom: 1vh;
         // right: 1vw;
@@ -89,12 +93,13 @@ $bp-desktop: 1200px;
         width: 20%;
     }
 
-    .closeBtn{
+    .closeBtn {
         position: absolute;
         background-color: transparent;
         bottom: 1vh;
         border: none;
         width: 100px;
+        cursor: pointer;
     }
 
     .ositaSonriendo {
@@ -107,14 +112,15 @@ $bp-desktop: 1200px;
 
     .formulario {
         position: absolute;
-        bottom: 10vh;
+        bottom: 7vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 10px;
 
         input {
-            width: 300px;
+            max-width: 300px;
+            width: 70vw;
             height: 45px;
             border-radius: 10px;
             border: 1px solid #f8d6dd;
@@ -145,4 +151,122 @@ $bp-desktop: 1200px;
             box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.3);
         }
     }
+}
+
+@media (min-width: $bp-tablet) {
+    .confirmacion {
+
+        .close {
+            // position: absolute;
+            // bottom: 1vh;
+            // right: 1vw;
+            // max-width: 100px;
+            width: 30%;
+        }
+
+        .ositaSonriendo {
+            width: 35vw;
+        }
+
+        .formulario {
+            bottom: 10vh;
+
+            input {
+                max-width: 400px;
+                width: 70vw;
+            }
+        }
+    }
+}
+
+@media (min-width: $bp-ipad) and (max-width: ($bp-desktop - 1)) {
+    .confirmacion {
+
+        h2{
+            font-size: 12rem;
+            letter-spacing: 9px;
+        }
+
+        .close {
+            width: 40%;
+        }
+
+        .ositaSonriendo {
+            width: 35vw;
+        }
+
+        .formulario {
+            bottom: 13vh;
+
+            input {
+                max-width: 500px;
+                width: 100vw;
+                height: 55px;
+                font-size: 1.8rem;
+            }
+
+            button {
+                margin-top: 30px;
+                width: 150px;
+                height: 50px;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+@media (min-width: $bp-desktop) {
+    .confirmacion {
+
+    .close {
+        width: 20%;
+    }
+
+    .closeBtn {
+        top: -60vh;
+        right: 0vh;
+    }
+
+    .ositaSonriendo {
+        top: -8vh;
+        width: 12vw;
+    }
+
+    .formulario {
+        bottom: 4vh;
+
+        input {
+            max-width: 300px;
+            width: 70vw;
+            height: 30px;
+            border-radius: 10px;
+            border: 1px solid #f8d6dd;
+            background-color: #fff;
+            font-family: 'Gentium Plus', serif;
+            font-style: italic;
+            color: #F8AEBE;
+            text-align: center;
+            font-size: 1.2rem;
+
+            &::placeholder {
+                color: #F8AEBE;
+            }
+        }
+
+        button {
+            margin-top: 10px;
+            width: 150px;
+            height: 30px;
+            background-color: #F784A0;
+            color: #fff;
+            font-family: 'Gentium Plus', serif;
+            font-style: italic;
+            font-size: 1rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.3);
+        }
+    }
+}
 }

@@ -1,28 +1,40 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom'; 
 import './confirmacion.scss';
 import OsitaSonriendo from '../../assets/ositaSonriendo.png';
-import axios from 'axios';
 import Close from '../../assets/close.png';
 
 const Confirmacion = ({ onClose }) => {
     const [nombre, setNombre] = useState('');
     const [mensaje, setMensaje] = useState('');
+    const navigate = useNavigate();
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
+        
+        // Validación básica de campos (opcional pero recomendada)
+        if (!nombre.trim() || !mensaje.trim()) {
+            alert("Por favor completa todos los campos");
+            return;
+        }
+        
+        // Navegación directa sin llamada a API
+        navigate('/invitacion-confirmada');
+        
+        /*
+        // Código comentado para futura implementación de API
         try {
             await axios.post('https://tu-api.com/confirmacion', {
                 nombre,
                 mensaje
             });
-            alert("¡Datos enviados con éxito!");
-            setNombre('');
-            setMensaje('');
+            navigate('/invitacion-confirmada');
         } catch (error) {
             console.error("Error al enviar:", error);
             alert("Hubo un error al enviar los datos.");
         }
+        */
     };
 
     return (
@@ -43,7 +55,7 @@ const Confirmacion = ({ onClose }) => {
                 />
                 <input
                     type="text"
-                    placeholder="Déjanos tu nombre"
+                    placeholder="Déjanos tu mensaje"
                     value={mensaje}
                     onChange={(e) => setMensaje(e.target.value)}
                     required

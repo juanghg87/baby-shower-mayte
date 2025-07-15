@@ -4,14 +4,20 @@
   box-sizing: border-box;
 }
 
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
 html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
 
 body {
-  overflow-x: hidden;
   position: relative;
+  overflow: hidden;
 }
 
 body::before {
@@ -35,28 +41,16 @@ body::before {
   background-attachment: fixed;
 }
 
-#root {
+.app-container {
   position: relative;
   height: 100vh;
-  overflow-y: auto;
-  scroll-snap-type: y mandatory;
-}
-
-main {
-  display: block;
-}
-
-section {
-  height: 100vh;
-  scroll-snap-align: start;
-}
-
-.content,
-.invitacion {
-  position: relative;
-  height: 100vh;
+  width: 100vw;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+
+.route-section {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+  overflow: hidden;
 }

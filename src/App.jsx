@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.scss';
-import Name from './components/name/Name.jsx';
-import SplashScreen from './components/splashScreen/SplashScreen.jsx';
-import Invitacion from './components/invitacion/Invitacion.jsx';
+import AnimatedRoutes from './components/AnimatedRoutes';
+import SplashScreen from './components/splashScreen/SplashScreen';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -16,22 +15,9 @@ function App() {
   }, []);
 
   return (
-    <>
-      {loading ? (
-        <SplashScreen />
-      ) : (
-        <main>
-          <section className="content" id="home">
-            <Name />
-          </section>
-
-          <section className="invitacion" id="invitacion">
-            <Invitacion />
-          </section>
-        </main>
-      )}
-
-    </>
+    <div className="app-container">
+      {loading ? <SplashScreen /> : <AnimatedRoutes />}
+    </div>
   );
 }
 

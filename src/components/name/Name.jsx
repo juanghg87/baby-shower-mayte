@@ -1,5 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import "./name.scss";
 import Nube3 from "../../assets/nube3.png";
 import Osito2 from "../../assets/osito2.png";
@@ -55,7 +56,7 @@ const Name = () => {
   };
 
   return (
-    <div>
+    <div className="route-section content" id="home">
       <motion.div
         ref={parte1Ref}
         initial="hidden"
@@ -87,18 +88,19 @@ const Name = () => {
       >
         <motion.img src={Nube2} alt="Nube decorativa" className="nube2" {...nubeAnimation} />
         <img src={Osito1} alt="Osita decorativa" className="osito1" />
-        <button
-          id="btn"
-          className="glass"
-          onClick={() => {
-            setTimeout(() => {
-              handleInvitacion();
-            }, 3000);
-          }}
-        >
-          Invitación
-        </button>
-
+        <Link to="/invitacion">
+          <button
+            id="btn"
+            className="glass"
+            onClick={() => {
+              setTimeout(() => {
+                handleInvitacion();
+              }, 3000);
+            }}
+          >
+            Invitación
+          </button>
+        </Link>
       </motion.div>
     </div>
   );

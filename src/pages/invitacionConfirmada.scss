@@ -292,6 +292,7 @@ $bp-desktop: 1200px;
 
         .listaDeseos {
             font-size: 1.8rem;
+            cursor: pointer;
         }
 
     }
@@ -306,59 +307,112 @@ $bp-desktop: 1200px;
     }
 }
 
-@media (min-width: $bp-ipad) and (max-width: ($bp-desktop - 1)) {
+@media (min-width: $bp-desktop)  {
     .containerAgradecimientos {
+        width: 100vw;
+        height: 40vh;
+        margin-top: 5vh;
+
+
+        .articuloAgradecimientos {
+            width: 60vw;
+            height: 40vh;
+        }
 
         .textoAgradecimiento {
-            width: 80vw;
-            font-size: 4rem;
+            width: 50vw;
+            font-size: 3rem;
         }
     }
 
     .contenedorFecha {
-        top: 3vh;
+        width: 100vw;
+        height: 15vh;
 
         .contendoFecha {
+            width: 50vw;
+            border-radius: 50px;
+            height: 10vh;
 
             .fecha {
-                font-size: 5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: 'Dancing Script', serif;
+                color: #F784A0;
+                font-size: 2.5rem;
             }
 
             .fechaDos {
-                font-size: 7rem;
-                margin: 0 55px;
+                font-size: 3.5rem;
+                margin: 0 50px;
             }
         }
 
         .ositaUno {
             max-width: 350px;
-            width: 25vw;
+            width: 10vw;
+            height: auto;
+            position: absolute;
+            z-index: -1;
+            top: -2vh;
+            opacity: .6;
         }
 
 
     }
 
     .ubicacion {
-        width: 100vw;
-        height: 25vh;
+        position: relative;
+        top: 5vh;
+        width: 52vw;
+        height: 22vh;
+
+        iframe {
+            max-width: 350px;
+            width: 15vw;
+            height: auto;
+            border-radius: 10px;
+            border: none !important;
+            outline: none !important;
+            box-shadow: none !important;
+        }
 
         .compartirBtn {
+            border: none;
+            background-color: transparent;
 
             .compartir {
-                width: 5vw;
+                max-width: 100px;
+                width: 3vw;
             }
         }
 
     }
 
     .informacion {
+        position: relative;
+        right: -50vw;
+        top: -15vh;
+        width: 50vw;
+        height: 20vh;
 
         .infoAdicional {
-            font-size: 2rem;
+            max-width: 350px;
+            width: 70vw;
+            height: 5vh;
+            border: none;
+            border-radius: 10px;
+            background-color: #F7567C;
+            font-family: 'Dancing Script', serif;
+            color: #fffae3;
+            font-size: 1.2rem;
         }
 
         .listaDeseos {
-            font-size: 2rem;
+            background-color: #FFFAE3;
+            color: #F7567C;
+            font-size: 1.5rem;
         }
 
     }
@@ -367,8 +421,17 @@ $bp-desktop: 1200px;
         position: relative;
 
         .nubes {
-            top: -40vh;
+            position: absolute;
+            max-width: 500px;
+            width: 80vw;
+            height: auto;
+            top: -30vh;
             z-index: -1;
+            opacity: 0.6;
+        }
+
+        .derecha {
+            right: -25vw;
         }
     }
 }

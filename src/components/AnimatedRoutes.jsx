@@ -4,6 +4,7 @@ import Name from "./name/Name";
 import Invitacion from "./invitacion/Invitacion";
 import Confirmacion from "./confirmacion/Confirmacion";
 import InvitacionConfirmada from "../pages/InvitacionConfirmada";
+import ListaDeseos from '../pages/ListaDeseos'
 
 const AnimatedRoutes = () => {
     const location = useLocation();
@@ -16,6 +17,7 @@ const AnimatedRoutes = () => {
                 <Route path="/invitacion" element={<Invitacion />} />
                 <Route path="/confirmacion" element={<Confirmacion />} />
                 <Route path="/invitacion-confirmada" element={<InvitacionConfirmada />} />
+                <Route path="/lista-deseos" element={<ListaDeseos />} />
             </Routes>
         </AnimatePresence>
     );

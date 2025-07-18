@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alike&family=Aoboshi+One&family=Cal+Sans&family=Dancing+Script:wght@400..700&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+$bp-tablet: 768px;
+$bp-ipad: 1024px;
+$bp-desktop: 1200px;
+
+
+.lista-deseos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    min-height: 100vh;
+    font-family: 'Dancing Script', serif;
+
+    &__titulo {
+        font-family: 'Pacifico', cursive;
+        font-size: 2.5rem;
+        color: #ff6b81;
+        background: #fff5f7;
+        padding: 0.75rem 1.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+        font-family: 'Dancing Script', serif;
+    }
+
+    &__lista {
+        width: 100%;
+        max-width: 360px;
+        list-style: none;
+        padding: 0;
+        margin: 0 0 2rem;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: space-around;
+        height: 50vh;
+        min-height: 400px;
+        overflow-y: auto;
+
+        .lista-deseos__item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background-color: #ff699f;
+            border-radius: 2rem;
+            margin: 5px 0 0 0;
+            padding: 0.2rem 1rem;
+            color: #fff;
+            font-size: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+            .lista-deseos__texto {
+                flex: 1;
+                padding-left: 0.5rem;
+            }
+
+            .lista-deseos__checkbox {
+                width: 1.4rem;
+                height: 1.4rem;
+                background-color: #FFFAE3;
+                margin-left: 1rem;
+
+                &:checked {
+                    background-color: #ff6b81;
+                }
+            }
+        }
+    }
+
+    &__hecho {
+        padding: 0.75rem 2rem;
+        border: none;
+        border-radius: 2rem;
+        background-color: #ff6b81;
+        color: #fff;
+        font-size: 1rem;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        transition: transform 0.2s ease;
+        font-family: 'Gentium Plus', serif;
+        font-style: italic;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+
+}
+
+
+.osita {
+    position: relative;
+    top: -75vh;
+    max-width: 500px;
+    width: 100vw;
+    opacity: .7;
+    z-index: -1;
+}
+
+.nombre {
+    border: none;
+    text-align: center;
+    width: 70vw;
+    height: 4vh;
+    font-family: 'Gentium Plus', serif;
+    font-style: italic;
+    border-radius: 10px;
+    color: #F784A0;
+    font-size: 1.2rem;
+
+    &::placeholder {
+        color: #F8AEBE;
+    }
+}
+
+.visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+@media (min-width: $bp-tablet) {
+    .lista-deseos {
+        padding: 2rem;
+        min-height: 100vh;
+
+        &__titulo {
+            font-size: 3.5rem;
+            padding: 1.5rem;
+        }
+
+        &__lista {
+            max-width: 460px;
+
+            .lista-deseos__item {
+                border-radius: 2rem;
+                margin: 10px 0 0 0;
+                padding: 0.5rem 1rem;
+                color: #fff;
+                font-size: 1.7rem;
+
+                .lista-deseos__texto {
+                    padding-left: 1.5rem;
+                }
+
+                .lista-deseos__checkbox {
+                    width: 1.4rem;
+                    height: 1.4rem;
+                    background-color: #FFFAE3;
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+
+
+    .osita {
+        position: relative;
+        top: -75vh;
+        left: 50%;
+        translate: -50%;
+        max-width: 800px;
+        width: 70vw;
+    }
+
+    .nombre {
+        width: 60vw;
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: $bp-ipad) and (max-width: ($bp-desktop - 1)) {
+    .lista-deseos {
+        &__titulo {
+            font-size: 4.5rem;
+        }
+
+        &__lista {
+            max-width: 560px;
+
+            .lista-deseos__item {
+                border-radius: 2rem;
+                margin: 15px 0 0 0;
+                padding: 0.8rem 1rem;
+                color: #fff;
+                font-size: 2rem;
+
+                .lista-deseos__texto {
+                    padding-left: 2rem;
+                }
+            }
+        }
+
+        &__hecho {
+            padding: 1rem 3rem;
+            font-size: 2rem;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+            transition: transform 0.2s ease;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    .nombre {
+        width: 60vw;
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: $bp-desktop) {
+    .lista-deseos {
+        padding: 0.5rem;
+
+        &__titulo {
+            font-size: 2.5rem;
+        }
+
+        &__lista {
+            width: 100%;
+            max-width: 360px;
+            overflow-y: auto;
+
+            .lista-deseos__item {
+                margin: 5px 0 0 0;
+                padding: 0.1rem 1rem;
+                font-size: 1.5rem;
+
+                .lista-deseos__checkbox {
+                    width: 1.0rem;
+                    height: 1.0rem;
+                }
+            }
+        }
+
+        &__hecho {
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+            position: relative;
+            top: -5vh;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    .osita {
+        top: -120vh;
+        max-width: 500px;
+        width: 70vw;
+    }
+
+    .nombre {
+        position: relative;
+        top: -5vh;
+        width: 30vw;
+        font-size: 1.2rem;
+    }
+}

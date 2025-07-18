@@ -54,7 +54,11 @@ const InvitacionConfirmada = () => {
             <aside className="informacion">
                 <button className="infoAdicional">U. Remanso del Rodeo</button>
                 <button className="infoAdicional">Hora: 4 pm</button>
-                <button className="infoAdicional listaDeseos">Lista de Deseos</button>
+                <Link to="/lista-deseos">
+                    <button className="infoAdicional listaDeseos">
+                        Lista de Deseos
+                    </button>
+                </Link>
             </aside>
 
             <aside className='nubesDecorativas'>

@@ -227,6 +227,7 @@ $bp-desktop: 1200px;
             width: 100%;
             max-width: 360px;
             overflow-y: auto;
+            margin-top: -5vh;
 
             .lista-deseos__item {
                 margin: 5px 0 0 0;
@@ -263,5 +264,6 @@ $bp-desktop: 1200px;
         top: -5vh;
         width: 30vw;
         font-size: 1.2rem;
+        margin: 2vh 0;
     }
 }

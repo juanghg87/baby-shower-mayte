@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { db, collection, addDoc } from '../../firebaseConfig';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 import './confirmacion.scss';
 import OsitaSonriendo from '../../assets/ositaSonriendo.png';
 import Close from '../../assets/close.png';
@@ -10,32 +11,35 @@ const Confirmacion = ({ onClose }) => {
     const [mensaje, setMensaje] = useState('');
     const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => { // Asegúrate de que la función sea 'async'
         e.preventDefault();
-        
-        // Validación básica de campos (opcional pero recomendada)
+
         if (!nombre.trim() || !mensaje.trim()) {
-            alert("Por favor completa todos los campos");
+            alert("Por favor completa todos los campos.");
             return;
         }
-        
-        // Navegación directa sin llamada a API
-        navigate('/invitacion-confirmada');
-        
-        /*
-        // Código comentado para futura implementación de API
+
         try {
-            await axios.post('https://tu-api.com/confirmacion', {
-                nombre,
-                mensaje
+            // Crea una referencia a la colección 'confirmaciones'
+            // Si la colección no existe, Firestore la creará automáticamente.
+            const docRef = await addDoc(collection(db, "confirmaciones"), {
+                nombre: nombre,
+                mensaje: mensaje,
+                fechaConfirmacion: new Date() // Opcional: añade la fecha y hora de la confirmación
             });
-            navigate('/invitacion-confirmada');
+
+            console.log("Documento escrito con ID: ", docRef.id);
+            alert("¡Tu confirmación ha sido enviada con éxito!"); // Mensaje de éxito
+            setNombre(''); // Limpia el campo nombre
+            setMensaje(''); // Limpia el campo mensaje
+            navigate('/invitacion-confirmada'); // Navega al mensaje de invitación confirmada
+
         } catch (error) {
-            console.error("Error al enviar:", error);
-            alert("Hubo un error al enviar los datos.");
+            console.error("Error al enviar la confirmación a Firestore:", error);
+            alert("Hubo un error al enviar tu confirmación. Por favor, inténtalo de nuevo."); // Mensaje de error
         }
-        */
     };
+
 
     return (
         <div className='confirmacion'>

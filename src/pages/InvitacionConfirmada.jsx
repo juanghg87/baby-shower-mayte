@@ -9,7 +9,7 @@ import Nube from "../assets/nube2.png"
 import NubeDos from "../assets/nube3.png"
 
 const compartirUbicacion = () => {
-    const texto = "¡Acompáñanos en este evento especial! Aquí la ubicación: https://www.google.com/maps/place/Remanso+del+Rodeo+Cll+6+sur+con+Cra+79-195";
+    const texto = "¡Acompáñanos en este evento especial! Aquí la ubicación: https://www.google.com/maps/place/Remanso+del+Rodeo+Cll+6+sur+con+Cra+79-150";
     const url = `https://wa.me/?text=${encodeURIComponent(texto)}`;
     window.open(url, '_blank');
 };

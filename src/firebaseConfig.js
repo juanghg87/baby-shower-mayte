@@ -1,9 +1,6 @@
-// firebaseConfig.js
 import { initializeApp } from "firebase/app";
-// Importa las funciones específicas de Firestore que vas a usar
-import { getFirestore, collection, addDoc } from "firebase/firestore"; // ¡Esta línea es clave!
+import { getFirestore, collection, addDoc } from "firebase/firestore";
 
-// Tu configuración de la app web de Firebase (ya la tienes correcta)
 const firebaseConfig = {
     apiKey: "AIzaSyA7Q-sZQjEmzvB0AmjUhcVfAdQbkR54ono",
     authDomain: "baby-shower-mayte.firebaseapp.com",
@@ -11,16 +8,11 @@ const firebaseConfig = {
     storageBucket: "baby-shower-mayte.firebasestorage.app",
     messagingSenderId: "904822204731",
     appId: "1:904822204731:web:4b8760496523ac629a2f1e",
-    measurementId: "G-CY4EYK8QLM" // Puedes remover esta línea si no usas Analytics
+    measurementId: "G-CY4EYK8QLM"
 };
 
-// Inicializa Firebase
 const app = initializeApp(firebaseConfig);
-
-// Obtén una referencia al servicio de Firestore
-const db = getFirestore(app); // ¡También esta línea es fundamental!
-
-// Exporta lo que necesitas usar en otros componentes
+const db = getFirestore(app);
 export {
     db,
     collection,

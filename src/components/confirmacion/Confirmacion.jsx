@@ -11,7 +11,7 @@ const Confirmacion = ({ onClose }) => {
     const [mensaje, setMensaje] = useState('');
     const navigate = useNavigate();
 
-    const handleSubmit = async (e) => { // Asegúrate de que la función sea 'async'
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         if (!nombre.trim() || !mensaje.trim()) {
@@ -20,23 +20,21 @@ const Confirmacion = ({ onClose }) => {
         }
 
         try {
-            // Crea una referencia a la colección 'confirmaciones'
-            // Si la colección no existe, Firestore la creará automáticamente.
             const docRef = await addDoc(collection(db, "confirmaciones"), {
                 nombre: nombre,
                 mensaje: mensaje,
-                fechaConfirmacion: new Date() // Opcional: añade la fecha y hora de la confirmación
+                fechaConfirmacion: new Date()
             });
 
             console.log("Documento escrito con ID: ", docRef.id);
-            alert("¡Tu confirmación ha sido enviada con éxito!"); // Mensaje de éxito
-            setNombre(''); // Limpia el campo nombre
-            setMensaje(''); // Limpia el campo mensaje
-            navigate('/invitacion-confirmada'); // Navega al mensaje de invitación confirmada
+            alert("¡Tu confirmación ha sido enviada con éxito!");
+            setNombre('');
+            setMensaje('');
+            navigate('/invitacion-confirmada');
 
         } catch (error) {
             console.error("Error al enviar la confirmación a Firestore:", error);
-            alert("Hubo un error al enviar tu confirmación. Por favor, inténtalo de nuevo."); // Mensaje de error
+            alert("Hubo un error al enviar tu confirmación. Por favor, inténtalo de nuevo.");
         }
     };
 

@@ -8,6 +8,13 @@ import Compartir from '../assets/share.png'
 import Nube from "../assets/nube2.png"
 import NubeDos from "../assets/nube3.png"
 
+const compartirUbicacion = () => {
+    const texto = "¡Acompáñanos en este evento especial! Aquí la ubicación: https://www.google.com/maps/place/Remanso+del+Rodeo+Cll+6+sur+con+Cra+79-195";
+    const url = `https://wa.me/?text=${encodeURIComponent(texto)}`;
+    window.open(url, '_blank');
+};
+
+
 const InvitacionConfirmada = () => {
     return (
         <motion.div
@@ -46,9 +53,13 @@ const InvitacionConfirmada = () => {
                         title="Mapa de ubicación"
                     ></iframe>
                 </a>
-                <button className='compartirBtn'>
-                    <img src={Compartir} alt="Imangen de compartir en redes de decoración" className="compartir" />
+                <button
+                    className='compartirBtn'
+                    onClick={compartirUbicacion}
+                >
+                    <img src={Compartir} alt="Imagen de compartir en redes de decoración" className="compartir" />
                 </button>
+
             </aside>
 
             <aside className="informacion">

@@ -1,7 +1,6 @@
-// Invitacion.jsx
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import "./invitacion.scss";
 import Perrita1 from "../../assets/perrita1.png";
 import Nube2 from "../../assets/nube2.png";
@@ -70,7 +69,9 @@ const Invitacion = () => {
                     <button className="boton1" onClick={() => setMostrarConfirmacion(true)}>
                         Confirmar asistencia
                     </button>
-                    <button className="boton2">Más adelante</button>
+                    <Link to="/">
+                        <button className="boton2">Más adelante</button>
+                    </Link>
                 </div>
             </div>
 

@@ -1,4 +1,3 @@
-import React from 'react'
 import './spButton.scss'
 import WhatsApp from "../../assets/wp.png"
 
@@ -20,7 +19,7 @@ const WpButton = () => {
                 onClick={() => {
                     setTimeout(() => {
                         handleWhatsAppRedirect();
-                    }, 3000);
+                    }, 1000);
                 }}
             >
                 <img src={WhatsApp} alt="WhatsApp conexión" className='whatsAppBtn' />

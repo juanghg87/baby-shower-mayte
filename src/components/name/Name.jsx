@@ -95,7 +95,7 @@ const Name = () => {
             onClick={() => {
               setTimeout(() => {
                 handleInvitacion();
-              }, 3000);
+              }, 1000);
             }}
           >
             Invitación

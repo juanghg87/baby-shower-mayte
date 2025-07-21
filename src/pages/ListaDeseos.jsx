@@ -150,7 +150,7 @@ const ListaDeseos = () => {
                             <span className="lista-deseos__texto">
                                 {gift.nombre}
                                 {gift.regalado && gift.persona && gift.persona !== 'null' && (
-                                    <span className="lista-deseos__regalado-por"> (Regalado por: {gift.persona})</span>
+                                    <span className="lista-deseos__regalado-por"></span>
                                 )}
                             </span>
                             {/* Renderiza el checkbox solo si el regalo no está regalado */}

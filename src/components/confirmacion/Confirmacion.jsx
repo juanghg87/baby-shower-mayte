@@ -14,7 +14,7 @@ const Confirmacion = ({ onClose }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        if (!nombre.trim() || !mensaje.trim()) {
+        if (!nombre.trim()) {
             alert("Por favor completa todos los campos.");
             return;
         }
@@ -50,17 +50,17 @@ const Confirmacion = ({ onClose }) => {
             <form className="formulario" onSubmit={handleSubmit}>
                 <input
                     type="text"
-                    placeholder="Déjanos tu nombre"
+                    placeholder="Primer Invitado"
                     value={nombre}
                     onChange={(e) => setNombre(e.target.value)}
                     required
                 />
                 <input
                     type="text"
-                    placeholder="Déjanos tu mensaje"
+                    placeholder="Segundo Invitado"
                     value={mensaje}
                     onChange={(e) => setMensaje(e.target.value)}
-                    required
+                    // required
                 />
                 <button type="submit">Enviar</button>
             </form>

@@ -77,6 +77,13 @@ const Name = () => {
       >
         <h2 className="message">Bienvenidos al Baby Shower de</h2>
         <h1 className="name">Mayté</h1>
+        <aside className='contenedorFecha'>
+          <article className='contendoFecha'>
+            <span className='fecha'>
+              Domingo <span className='fechaDos'><strong>24</strong></span> Agosto
+            </span>
+          </article>
+        </aside>
       </motion.div>
 
       <motion.div

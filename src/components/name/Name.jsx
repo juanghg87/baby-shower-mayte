@@ -80,7 +80,7 @@ const Name = () => {
         <aside className='contenedorFecha'>
           <article className='contendoFecha'>
             <span className='fecha'>
-              Domingo <span className='fechaDos'><strong>24</strong></span> Agosto
+              Domingo <span className='fechaDos'><strong>24 / 4pm</strong></span> Agosto
             </span>
           </article>
         </aside>
